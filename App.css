@@ -1,0 +1,158 @@
+*{
+    padding: 0px;
+    margin:0px;
+}
+
+body{
+    background-color: rgb(31, 34, 32);
+}
+
+.page{
+   margin: 148px; 
+   padding-left: 60px;
+   display: grid;
+   row-gap: 18px;
+   column-gap: 18px;
+   grid-template-columns: repeat(auto-fill, 256px);
+   
+}
+
+.notes, .addnote{
+    height: 210px;
+    padding: 15px 20px 20px;
+    background-color: rgb(54, 138, 147);
+    border-radius: 5px;
+}
+
+
+
+.notes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.addnote{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buttons{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.buttons .delete{
+     width: 32px;
+     background-color: rgb(137, 16, 16);
+     border-radius: 5px;
+}
+
+.buttons .submit{
+    width: 50px;
+    height: 25px;
+    background-color: rgb(122, 123, 124);
+}
+
+.popup-box{
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   z-index: 1;
+   transform: translate(-50%, -50%) scale(0);
+   z-index: 10px;
+   background-color: #f5f0f0;
+   width: 520px;
+   max-width: 80%;
+   border: 1px solid black;
+   border-radius: 10px;
+}
+
+.popup-box.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.header i{
+    color: red;
+    cursor: pointer;
+    font-size: 23px;
+}
+
+form{
+    display: flex;
+   flex-direction: column;
+}
+
+.header p{
+    font-size: 23px;
+}
+
+.content form{
+    margin:15px;
+}
+form input{
+    width: 93%;
+    margin: 17px;
+    margin-top: 4px;
+    height: 25px;
+  
+    border-color: black;
+    border-radius: 5px;
+}
+
+form .row{
+  margin-bottom:5px;
+}
+
+form .description textarea{
+    height: 120px;
+    resize: none;
+    border-color: black;
+    border-radius: 5px;
+    width: 93%;
+    margin: 17px;
+    margin-top: 4px;
+}
+
+form button{
+    width: 50%;
+    height: 30px;
+    margin-left:130px;
+    background-color: rgb(29, 79, 137);
+    margin-bottom: 15px;
+}
+
+.overlay{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    pointer-events: none;
+}
+
+.overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.addnote{
+    cursor: pointer;
+    
+}
+
+.addnote :hover{
+       cursor: pointer;
+}
